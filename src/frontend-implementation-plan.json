@@ -1,152 +1,49 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Vanguard Fashion E-commerce Frontend Implementation",
+  "title": "Replace placeholder Vanguard logo with uploaded tsgabrielle brand logos for light and dark backgrounds",
   "requirements": [
     {
-      "id": "REQ-3",
-      "summary": "Build fullscreen slideshow carousel component for homepage with smooth transitions",
+      "id": "REQ-8",
+      "summary": "Replace the placeholder 'Vanguard' text logo in the Layout component header with the uploaded tsgabrielle logo, using the purple version for light backgrounds and the white version for dark backgrounds, with appropriate theme-based switching",
       "acceptanceCriteria": [
-        "Carousel takes up full viewport height",
-        "Slides transition smoothly with navigation controls",
-        "Carousel is responsive and works on all screen sizes"
+        "The header displays the purple tsgabrielle logo when in light mode",
+        "The header displays the white tsgabrielle logo when in dark mode",
+        "The logo maintains appropriate dimensions and does not distort",
+        "The logo is clickable and navigates to the homepage",
+        "The 'Vanguard' text is completely replaced with the logo image"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroCarousel.tsx",
-          "operation": "create",
-          "description": "Create a fullscreen carousel component that displays hero images with smooth transitions, navigation controls (prev/next arrows and dot indicators), and auto-play functionality. The carousel must use the generated hero images at frontend/public/assets/generated/hero-1.dim_1920x1080.png, frontend/public/assets/generated/hero-2.dim_1920x1080.png, and frontend/public/assets/generated/hero-3.dim_1920x1080.png. Implement with full viewport height (h-screen), CSS transitions for smooth slide changes, and responsive behavior for all screen sizes."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "create",
-          "description": "Create the homepage that renders the HeroCarousel component as the first element (satisfying the constraint that fullscreen carousel must be first). Include any additional homepage content sections below the carousel if needed. This page serves as the main landing experience for Vanguard Fashion."
-        },
-        {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/Layout.tsx",
           "operation": "modify",
-          "description": "Wire the Home page into the app router, establishing it as the main route ('/'). Ensure proper routing configuration and navigation structure is in place."
+          "description": "Replace the 'Vanguard' text logo with an img element that displays the tsgabrielle-logo (1).png for light mode and tsgabrielle-logo-white.png for dark mode. Implement theme detection using the prefers-color-scheme media query or Tailwind's dark mode classes. Ensure the logo is wrapped in a Link component to navigate to the homepage, maintains appropriate dimensions (constrain height to match header height while preserving aspect ratio), and is responsive across all screen sizes including mobile."
         }
       ]
     },
     {
-      "id": "REQ-4",
-      "summary": "Create product listing page displaying fashion items in responsive grid with images, names, and prices",
+      "id": "REQ-9",
+      "summary": "Update all references to 'Vanguard' branding throughout the application to use 'TS Gabrielle' as the brand name, including page titles, meta tags, and any text content that references the brand",
       "acceptanceCriteria": [
-        "Products are displayed in a responsive grid",
-        "Each product shows image, name, and price",
-        "Users can click products to view details"
+        "All instances of 'Vanguard' in UI text are replaced with 'TS Gabrielle'",
+        "HTML title and meta tags reflect the TS Gabrielle brand name",
+        "Footer and any other branded text areas use the correct brand name"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/ProductListing.tsx",
-          "operation": "create",
-          "description": "Create a product listing page that fetches all products from the backend using getAllProducts() and displays them in a responsive grid layout. Each product card shows the first image from imageUrls (using ExternalBlob.getDirectURL()), product name, and formatted price. Cards are clickable and navigate to the product detail page. Implement loading states and error handling for the async backend call."
-        },
-        {
-          "path": "frontend/src/components/ProductCard.tsx",
-          "operation": "create",
-          "description": "Create a reusable product card component that displays a product image, name, and price. The component accepts product data as props and is styled to match the vanguardist design aesthetic with brand color #a932bd accents. Include hover effects and ensure responsive behavior."
-        },
-        {
-          "path": "frontend/src/hooks/useProducts.ts",
-          "operation": "create",
-          "description": "Create a custom hook that fetches products from the backend using getAllProducts(). Handle loading states, errors, and caching. Return products array along with loading and error states for consumption by product listing and other components."
-        },
-        {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Add route for the ProductListing page (e.g., '/products' or '/shop') and wire it into the navigation structure so users can access the product catalog."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Create product detail page with full information, size/color selection, and add-to-cart functionality",
-      "acceptanceCriteria": [
-        "Product details are displayed clearly",
-        "Users can select size and color options",
-        "Add to cart button adds selected item to shopping cart"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/ProductDetail.tsx",
-          "operation": "create",
-          "description": "Create a product detail page that fetches a single product using getProduct(id) from the backend. Display all product images using a gallery/carousel, name, description, price, and interactive size/color selectors. Implement add-to-cart functionality that calls addToCart() with the selected size, color, and quantity. Include quantity input, validation for size/color selection, and success feedback when item is added. Use the product ID from route parameters."
-        },
-        {
-          "path": "frontend/src/components/ProductGallery.tsx",
-          "operation": "create",
-          "description": "Create an image gallery component for the product detail page that displays all product images from imageUrls array. Include thumbnail navigation and main image view. Use ExternalBlob.getDirectURL() for image sources to leverage streaming and caching."
-        },
-        {
-          "path": "frontend/src/hooks/useCart.ts",
-          "operation": "create",
-          "description": "Create a custom hook that manages cart operations including fetching the cart using getCart(userId), adding items via addToCart(), and managing cart state. Handle userId generation/storage (can use a temporary local identifier since authentication is not required). Provide cart data, loading states, and mutation functions for use across cart-related components."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Add route for the ProductDetail page with dynamic product ID parameter (e.g., '/product/:id') and ensure it is wired into the router. Link this route from ProductCard clicks in the product listing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Build shopping cart page displaying items with quantities, updates, removal, and total price",
-      "acceptanceCriteria": [
-        "All cart items are displayed with details",
-        "Quantities can be adjusted inline",
-        "Total price updates automatically",
-        "Items can be removed from cart"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/Cart.tsx",
-          "operation": "create",
-          "description": "Create a shopping cart page that fetches and displays cart items using the useCart hook. Show each item with product image, name, selected size/color, quantity adjuster, individual price, and remove button. Calculate and display the cart total. Implement inline quantity updates and item removal with optimistic UI updates and backend synchronization. Handle empty cart state with appropriate messaging."
-        },
-        {
-          "path": "frontend/src/components/CartItem.tsx",
-          "operation": "create",
-          "description": "Create a reusable cart item component that displays a single cart product with its image, name, size, color, quantity controls (increment/decrement buttons), price, and remove button. Handle quantity changes and removal actions via callback props. Style with brand color #a932bd for interactive elements."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Add route for the Cart page (e.g., '/cart') and include a cart icon/link in the navigation header that displays the current cart item count and navigates to the cart page when clicked."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Implement creative vanguardist design aesthetic with brand color #a932bd, bold typography, and artistic elements celebrating transwomen fashion",
-      "acceptanceCriteria": [
-        "Primary brand color #a932bd is used consistently for key UI elements",
-        "Design features bold, artistic typography and modern layouts",
-        "Visual aesthetic is cohesive and celebrates the target audience",
-        "Design feels cutting-edge and fashion-forward"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Configure global design system with brand color #a932bd as the primary accent color using CSS custom properties. Implement bold, artistic typography choices with modern font pairings. Define vanguardist color palette, spacing scale, and design tokens that create a cutting-edge fashion-forward aesthetic. Include styles for artistic visual elements and ensure cohesive theming throughout."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend Tailwind configuration to include brand color #a932bd as the primary color in the theme. Configure custom fonts for bold typography, extend spacing and sizing scales for modern layouts, and add any custom utilities needed for the vanguardist design aesthetic. Ensure the configuration supports the artistic and cutting-edge visual identity."
+          "description": "Update the HTML title tag from 'Vanguard Fashion' to 'TS Gabrielle Fashion' and update any meta tags that reference the brand name to use 'TS Gabrielle'."
         },
         {
           "path": "frontend/src/components/Layout.tsx",
-          "operation": "create",
-          "description": "Create a layout component that wraps all pages with consistent header navigation (including logo, main nav links to home/products/cart, and cart icon with count) and footer. Apply the vanguardist design aesthetic with brand color #a932bd accents, bold typography, and modern styling. The layout ensures visual consistency and celebrates the fashion-forward identity across all pages."
+          "operation": "modify",
+          "description": "Replace any remaining text references to 'Vanguard' in the footer or other text areas with 'TS Gabrielle'. Review the footer section and any copyright or branding text to ensure consistency with the new brand name."
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/pages/Home.tsx",
           "operation": "modify",
-          "description": "Wrap all routed pages with the Layout component to ensure consistent navigation and design aesthetic across the entire application."
+          "description": "Update any text content that references 'Vanguard' to use 'TS Gabrielle' instead. Review brand messaging, hero text, and feature descriptions to ensure all instances of the old brand name are replaced."
         }
       ]
     }

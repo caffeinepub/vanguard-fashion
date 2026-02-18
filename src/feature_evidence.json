@@ -2,11 +2,30 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-build-a-fullscreen-slideshow-carousel-component-for-the-homepage-that-displays-hero-images-with-smooth-transitions",
-      "featureTitle": "Build a fullscreen slideshow carousel component for the homepage that displays hero images with smooth transitions",
+      "featureId": "feature-replace-the-placeholder-vanguard-text-logo-in-the-layout-component-header-with-the-uploaded-tsgabrielle-logo-using-the-purple-version-tsgabrielle-logo-1-png-for-light-backgrounds-and-the-white-version-tsgabrielle-logo-white-png-for-dark-backgrounds-with-appropriate-theme-based-switching",
+      "featureTitle": "Replace the placeholder 'Vanguard' text logo in the Layout component header with the uploaded tsgabrielle logo, using the purple version (tsgabrielle-logo (1).png) for light backgrounds and the white version (tsgabrielle-logo-white.png) for dark backgrounds, with appropriate theme-based switching",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/HeroCarousel.tsx",
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-all-references-to-vanguard-branding-throughout-the-application-to-use-ts-gabrielle-as-the-brand-name-including-page-titles-meta-tags-and-any-text-content-that-references-the-brand",
+      "featureTitle": "Update all references to 'Vanguard' branding throughout the application to use 'TS Gabrielle' as the brand name, including page titles, meta tags, and any text content that references the brand",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Layout.tsx",
         "frontend/src/pages/Home.tsx"
       ],
       "components": [
@@ -18,94 +37,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-a-product-listing-page-that-displays-all-available-fashion-items-in-a-grid-layout-with-images-names-and-prices",
-      "featureTitle": "Create a product listing page that displays all available fashion items in a grid layout with images, names, and prices",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ProductCard.tsx",
-        "frontend/src/hooks/useProducts.ts",
-        "frontend/src/pages/ProductListing.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-a-product-detail-page-that-shows-full-product-information-including-description-available-sizes-colors-and-add-to-cart-functionality",
-      "featureTitle": "Create a product detail page that shows full product information including description, available sizes, colors, and add-to-cart functionality",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ProductGallery.tsx",
-        "frontend/src/hooks/useCart.ts",
-        "frontend/src/pages/ProductDetail.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-build-a-shopping-cart-page-that-displays-cart-items-with-quantities-allows-quantity-updates-and-item-removal-and-shows-the-total-price",
-      "featureTitle": "Build a shopping cart page that displays cart items with quantities, allows quantity updates and item removal, and shows the total price",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/CartItem.tsx",
-        "frontend/src/pages/Cart.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-a-creative-and-vanguardist-design-aesthetic-throughout-the-site-with-the-brand-color-a932bd-as-the-primary-accent-color-featuring-bold-typography-modern-layouts-and-artistic-visual-elements-that-celebrate-transwomen-fashion",
-      "featureTitle": "Implement a creative and vanguardist design aesthetic throughout the site with the brand color #a932bd as the primary accent color, featuring bold typography, modern layouts, and artistic visual elements that celebrate transwomen fashion",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
+        "REQ-9"
       ],
       "confidence": "high"
     }

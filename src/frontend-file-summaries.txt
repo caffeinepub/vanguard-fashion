@@ -1,16 +1,17 @@
 {
   "frontend/src/App.tsx": "Main application component that sets up TanStack Router with routes for home, products, product detail, and cart pages, all wrapped in the Layout component.",
-  "frontend/src/components/Layout.tsx": "Layout wrapper component with sticky header navigation featuring the Vanguard brand logo, navigation links, cart icon with item count, mobile menu, and footer with attribution.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component with sticky header navigation featuring the TS Gabrielle logo (purple for light mode, white for dark mode), navigation links, cart icon with item count, mobile menu, and footer with brand attribution.",
   "frontend/src/components/HeroCarousel.tsx": "Fullscreen carousel component displaying three hero images with smooth transitions, auto-play functionality, navigation arrows, and dot indicators.",
   "frontend/src/components/ProductCard.tsx": "Reusable product card component displaying product image, name, and price with hover effects and click navigation to product detail page.",
   "frontend/src/components/ProductGallery.tsx": "Image gallery component for product detail page with main image display and thumbnail navigation for multiple product images.",
   "frontend/src/components/CartItem.tsx": "Cart item component displaying product details, size/color selection, quantity controls with increment/decrement buttons, price, and remove functionality.",
-  "frontend/src/pages/Home.tsx": "Homepage featuring the fullscreen hero carousel, welcome section with call-to-action, and three feature cards highlighting vanguardist design, artistic expression, and inclusive fashion.",
+  "frontend/src/pages/Home.tsx": "Homepage featuring the fullscreen hero carousel, welcome section with call-to-action, and three feature cards highlighting vanguardist design, artistic expression, and inclusive fashion with updated TS Gabrielle branding.",
   "frontend/src/pages/ProductListing.tsx": "Product listing page that fetches and displays all products in a responsive grid layout with loading states and error handling.",
   "frontend/src/pages/ProductDetail.tsx": "Product detail page showing product gallery, full information, size/color selectors, quantity input, and add-to-cart functionality with validation.",
   "frontend/src/pages/Cart.tsx": "Shopping cart page displaying all cart items with quantity adjustment, removal options, order summary with total calculation, and checkout button.",
   "frontend/src/hooks/useProducts.ts": "Custom React Query hooks for fetching all products and individual product details from the backend with loading and error states.",
   "frontend/src/hooks/useCart.ts": "Custom React Query hook managing cart operations including fetching cart, adding items, updating quantities, and removing items with local user ID generation.",
   "frontend/src/index.css": "Global styles with OKLCH color system customized for brand color #a932bd (purple/magenta) with comprehensive light and dark mode support.",
-  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom colors, fonts, border radius, and animations to support the vanguardist design aesthetic."
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom colors, fonts, border radius, and animations to support the vanguardist design aesthetic.",
+  "frontend/index.html": "HTML entry point with updated page title to \"TS Gabrielle Fashion\" and meta tags reflecting the new brand name."
 }

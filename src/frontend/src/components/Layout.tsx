@@ -16,10 +16,17 @@ export function Layout() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="text-3xl font-black tracking-tighter bg-gradient-to-r from-[#a932bd] via-[#d946ef] to-[#a932bd] bg-clip-text text-transparent">
-                VANGUARD
-              </div>
+            <Link to="/" className="flex items-center">
+              <img
+                src="/assets/tsgabrielle-logo (1).png"
+                alt="TS Gabrielle"
+                className="h-10 w-auto dark:hidden"
+              />
+              <img
+                src="/assets/tsgabrielle-logo-white.png"
+                alt="TS Gabrielle"
+                className="h-10 w-auto hidden dark:block"
+              />
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -95,9 +102,16 @@ export function Layout() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-black tracking-tighter bg-gradient-to-r from-[#a932bd] via-[#d946ef] to-[#a932bd] bg-clip-text text-transparent mb-4">
-                VANGUARD
-              </h3>
+              <img
+                src="/assets/tsgabrielle-logo (1).png"
+                alt="TS Gabrielle"
+                className="h-8 w-auto mb-4 dark:hidden"
+              />
+              <img
+                src="/assets/tsgabrielle-logo-white.png"
+                alt="TS Gabrielle"
+                className="h-8 w-auto mb-4 hidden dark:block"
+              />
               <p className="text-sm text-muted-foreground">
                 Celebrating bold, creative fashion for transwomen. Vanguardist designs that empower and inspire.
               </p>
@@ -125,16 +139,16 @@ export function Layout() {
             <div>
               <h4 className="font-bold text-sm uppercase tracking-wider mb-4">About</h4>
               <p className="text-sm text-muted-foreground">
-                Vanguard Fashion is dedicated to creating cutting-edge, artistic fashion that celebrates the beauty and strength of transwomen.
+                TS Gabrielle Fashion is dedicated to creating cutting-edge, artistic fashion that celebrates the beauty and strength of transwomen.
               </p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
             <p>
-              © {new Date().getFullYear()} Vanguard Fashion. Built with love using{' '}
+              © {new Date().getFullYear()} TS Gabrielle Fashion. Built with love using{' '}
               <a
                 href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(
-                  typeof window !== 'undefined' ? window.location.hostname : 'vanguard-fashion'
+                  typeof window !== 'undefined' ? window.location.hostname : 'tsgabrielle-fashion'
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

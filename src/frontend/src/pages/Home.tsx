@@ -16,7 +16,7 @@ export default function Home() {
             Fashion That Empowers
           </h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Vanguard Fashion celebrates the beauty, strength, and authenticity of transwomen through bold, artistic designs that push boundaries and redefine style.
+            TS Gabrielle Fashion celebrates the beauty, strength, and authenticity of transwomen through bold, artistic designs that push boundaries and redefine style.
           </p>
           <Button
             size="lg"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "E-commerce fashion store for transwomen featuring creative and vanguardist designs with brand color #a932bd and fullscreen slides at homepage",
   "architectural_notes": [
     "E-commerce platform targeting transwomen fashion market",
@@ -9,7 +9,6 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Vanguardist fashion hero image featuring bold geometric patterns and color #a932bd, artistic and modern aesthetic (hero-1.dim_1920x1080.png)\n- Creative fashion showcase hero image with avant-garde styling and dramatic lighting incorporating #a932bd accents (hero-2.dim_1920x1080.png)\n- Bold artistic hero image celebrating transwomen fashion with vibrant purple #a932bd color scheme and cutting-edge design (hero-3.dim_1920x1080.png)\n- Modern fashion product photo of statement jacket in vanguardist style with #a932bd details (product-jacket.dim_800x1000.png)\n- Artistic product photo of bold dress design with creative patterns featuring #a932bd (product-dress.dim_800x1000.png)\n- Avant-garde fashion product photo of unique top with geometric elements and purple accents (product-top.dim_800x1000.png)",
   "existing_features": [
     {
       "id": "feature-build-a-fullscreen-slideshow-carousel-component-for-the-homepage-that-displays-hero-images-with-smooth-transitions",
@@ -48,6 +47,22 @@
       "title": "Implement a creative and vanguardist design aesthetic throughout the site with the brand color #a932bd as the primary accent color, featuring bold typography, modern layouts, and artistic visual elements that celebrate transwomen fashion",
       "reqIds": [
         "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-placeholder-vanguard-text-logo-in-the-layout-component-header-with-the-uploaded-tsgabrielle-logo-using-the-purple-version-tsgabrielle-logo-1-png-for-light-backgrounds-and-the-white-version-tsgabrielle-logo-white-png-for-dark-backgrounds-with-appropriate-theme-based-switching",
+      "title": "Replace the placeholder 'Vanguard' text logo in the Layout component header with the uploaded tsgabrielle logo, using the purple version (tsgabrielle-logo (1).png) for light backgrounds and the white version (tsgabrielle-logo-white.png) for dark backgrounds, with appropriate theme-based switching",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-references-to-vanguard-branding-throughout-the-application-to-use-ts-gabrielle-as-the-brand-name-including-page-titles-meta-tags-and-any-text-content-that-references-the-brand",
+      "title": "Update all references to 'Vanguard' branding throughout the application to use 'TS Gabrielle' as the brand name, including page titles, meta tags, and any text content that references the brand",
+      "reqIds": [
+        "REQ-9"
       ],
       "version": 1
     }
@@ -91,6 +106,12 @@
       "reqIds": [
         "REQ-2"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create logo images for both light and dark backgrounds",
+      "reqIds": [],
       "status": "pending"
     }
   ],
