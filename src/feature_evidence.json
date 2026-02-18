@@ -2,10 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-placeholder-vanguard-text-logo-in-the-layout-component-header-with-the-uploaded-tsgabrielle-logo-using-the-purple-version-tsgabrielle-logo-1-png-for-light-backgrounds-and-the-white-version-tsgabrielle-logo-white-png-for-dark-backgrounds-with-appropriate-theme-based-switching",
-      "featureTitle": "Replace the placeholder 'Vanguard' text logo in the Layout component header with the uploaded tsgabrielle logo, using the purple version (tsgabrielle-logo (1).png) for light backgrounds and the white version (tsgabrielle-logo-white.png) for dark backgrounds, with appropriate theme-based switching",
+      "featureId": "feature-make-the-header-navigation-in-the-layout-component-transparent-with-a-backdrop-blur-effect-removing-the-solid-background-while-maintaining-readability",
+      "featureTitle": "Make the header navigation in the Layout component transparent with a backdrop blur effect, removing the solid background while maintaining readability",
       "files": [
-        "frontend/src/components/Layout.tsx"
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -16,17 +17,17 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-8"
+        "REQ-14"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-update-all-references-to-vanguard-branding-throughout-the-application-to-use-ts-gabrielle-as-the-brand-name-including-page-titles-meta-tags-and-any-text-content-that-references-the-brand",
-      "featureTitle": "Update all references to 'Vanguard' branding throughout the application to use 'TS Gabrielle' as the brand name, including page titles, meta tags, and any text content that references the brand",
+      "featureId": "feature-transform-the-layout-component-header-navigation-into-a-mega-menu-structure-that-displays-expanded-dropdown-panels-on-hover-for-main-navigation-items-home-products-cart-featuring-multi-column-layouts-with-links-descriptions-and-promotional-content",
+      "featureTitle": "Transform the Layout component header navigation into a mega menu structure that displays expanded dropdown panels on hover for main navigation items (Home, Products, Cart), featuring multi-column layouts with links, descriptions, and promotional content",
       "files": [
-        "frontend/index.html",
         "frontend/src/components/Layout.tsx",
-        "frontend/src/pages/Home.tsx"
+        "frontend/src/components/MegaMenu.tsx",
+        "frontend/src/hooks/useMegaMenu.ts"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -37,7 +38,47 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-9"
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-holographic-gradient-effects-to-the-header-navigation-elements-including-nav-links-and-the-cart-icon-using-animated-gradient-borders-and-background-effects-that-create-iridescent-shimmer-consistent-with-the-existing-holographic-effects-on-product-cards-and-buttons-featuring-the-brand-color-a932bd",
+      "featureTitle": "Apply holographic gradient effects to the header navigation elements including nav links and the cart icon, using animated gradient borders and background effects that create iridescent shimmer consistent with the existing holographic effects on product cards and buttons, featuring the brand color #a932bd",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-holographic-gradient-effects-to-the-mega-menu-dropdown-panels-including-iridescent-borders-around-the-panel-containers-and-subtle-holographic-background-gradients-that-complement-the-transparent-header-and-create-visual-cohesion-with-the-vanguardist-design-aesthetic",
+      "featureTitle": "Add holographic gradient effects to the mega menu dropdown panels, including iridescent borders around the panel containers and subtle holographic background gradients that complement the transparent header and create visual cohesion with the vanguardist design aesthetic",
+      "files": [
+        "frontend/src/components/MegaMenu.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
       ],
       "confidence": "high"
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 9,
   "summary": "E-commerce fashion store for transwomen featuring creative and vanguardist designs with brand color #a932bd and fullscreen slides at homepage",
   "architectural_notes": [
     "E-commerce platform targeting transwomen fashion market",
@@ -65,6 +65,70 @@
         "REQ-9"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-holographic-gradient-effects-to-product-cards-that-shift-colors-and-create-an-iridescent-appearance-on-hover-using-css-gradients-with-multiple-color-stops-including-the-brand-color-a932bd-and-complementary-hues",
+      "title": "Add holographic gradient effects to product cards that shift colors and create an iridescent appearance on hover, using CSS gradients with multiple color stops including the brand color #a932bd and complementary hues",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-holographic-border-effects-to-interactive-elements-including-buttons-the-add-to-cart-button-and-the-cart-icon-in-the-header-using-animated-gradient-borders-that-create-an-iridescent-shimmer",
+      "title": "Apply holographic border effects to interactive elements including buttons, the add-to-cart button, and the cart icon in the header, using animated gradient borders that create an iridescent shimmer",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-holographic-text-effects-to-headings-and-brand-elements-including-the-hero-carousel-titles-and-section-headings-using-background-clip-text-technique-with-animated-gradients-to-create-shimmering-iridescent-typography",
+      "title": "Add holographic text effects to headings and brand elements including the hero carousel titles and section headings, using background-clip text technique with animated gradients to create shimmering, iridescent typography",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-subtle-holographic-background-effect-for-the-hero-carousel-slides-and-key-landing-sections-using-layered-gradients-with-opacity-changes-to-add-depth-and-a-futuristic-aesthetic-that-complements-the-vanguardist-design-direction",
+      "title": "Create a subtle holographic background effect for the hero carousel slides and key landing sections, using layered gradients with opacity changes to add depth and a futuristic aesthetic that complements the vanguardist design direction",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-header-navigation-in-the-layout-component-transparent-with-a-backdrop-blur-effect-removing-the-solid-background-while-maintaining-readability",
+      "title": "Make the header navigation in the Layout component transparent with a backdrop blur effect, removing the solid background while maintaining readability",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-transform-the-layout-component-header-navigation-into-a-mega-menu-structure-that-displays-expanded-dropdown-panels-on-hover-for-main-navigation-items-home-products-cart-featuring-multi-column-layouts-with-links-descriptions-and-promotional-content",
+      "title": "Transform the Layout component header navigation into a mega menu structure that displays expanded dropdown panels on hover for main navigation items (Home, Products, Cart), featuring multi-column layouts with links, descriptions, and promotional content",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-holographic-gradient-effects-to-the-header-navigation-elements-including-nav-links-and-the-cart-icon-using-animated-gradient-borders-and-background-effects-that-create-iridescent-shimmer-consistent-with-the-existing-holographic-effects-on-product-cards-and-buttons-featuring-the-brand-color-a932bd",
+      "title": "Apply holographic gradient effects to the header navigation elements including nav links and the cart icon, using animated gradient borders and background effects that create iridescent shimmer consistent with the existing holographic effects on product cards and buttons, featuring the brand color #a932bd",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-holographic-gradient-effects-to-the-mega-menu-dropdown-panels-including-iridescent-borders-around-the-panel-containers-and-subtle-holographic-background-gradients-that-complement-the-transparent-header-and-create-visual-cohesion-with-the-vanguardist-design-aesthetic",
+      "title": "Add holographic gradient effects to the mega menu dropdown panels, including iridescent borders around the panel containers and subtle holographic background gradients that complement the transparent header and create visual cohesion with the vanguardist design aesthetic",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -111,6 +175,18 @@
     {
       "id": "AR-7",
       "summary": "Create logo images for both light and dark backgrounds",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add holographic effects to the design",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Make header menu transparent with mega menu and holographic effects",
       "reqIds": [],
       "status": "pending"
     }

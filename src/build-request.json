@@ -1,55 +1,98 @@
 {
   "kind": "build_request",
-  "title": "Replace placeholder Vanguard logo with uploaded tsgabrielle brand logos for light and dark backgrounds",
-  "projectName": "TS Gabrielle Fashion",
+  "title": "Add transparent mega menu with holographic effects to header",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-8",
-      "text": "Replace the placeholder 'Vanguard' text logo in the Layout component header with the uploaded tsgabrielle logo, using the purple version (tsgabrielle-logo (1).png) for light backgrounds and the white version (tsgabrielle-logo-white.png) for dark backgrounds, with appropriate theme-based switching",
+      "id": "REQ-14",
+      "text": "Make the header navigation in the Layout component transparent with a backdrop blur effect, removing the solid background while maintaining readability",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-1"
         ],
         "quotes": [
-          "logo in light and dark background"
+          "make head menu: transparent"
         ]
       },
       "acceptanceCriteria": [
-        "The header displays the purple tsgabrielle logo when in light mode",
-        "The header displays the white tsgabrielle logo when in dark mode",
-        "The logo maintains appropriate dimensions and does not distort",
-        "The logo is clickable and navigates to the homepage",
-        "The 'Vanguard' text is completely replaced with the logo image"
+        "Header has transparent background with backdrop-blur CSS property",
+        "Navigation remains readable over different background content",
+        "Maintains existing sticky positioning behavior"
       ]
     },
     {
-      "id": "REQ-9",
-      "text": "Update all references to 'Vanguard' branding throughout the application to use 'TS Gabrielle' as the brand name, including page titles, meta tags, and any text content that references the brand",
+      "id": "REQ-15",
+      "text": "Transform the Layout component header navigation into a mega menu structure that displays expanded dropdown panels on hover for main navigation items (Home, Products, Cart), featuring multi-column layouts with links, descriptions, and promotional content",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-1"
+        ],
+        "quotes": [
+          "mega menu"
         ]
       },
       "acceptanceCriteria": [
-        "All instances of 'Vanguard' in UI text are replaced with 'TS Gabrielle'",
-        "HTML title and meta tags reflect the TS Gabrielle brand name",
-        "Footer and any other branded text areas use the correct brand name"
+        "Main navigation items trigger mega menu panels on hover",
+        "Mega menu panels display in multi-column layout below the header",
+        "Panels include relevant links and content for each navigation section",
+        "Smooth transitions when opening and closing mega menu panels",
+        "Mobile-responsive behavior that collapses to accordion or drawer"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Apply holographic gradient effects to the header navigation elements including nav links and the cart icon, using animated gradient borders and background effects that create iridescent shimmer consistent with the existing holographic effects on product cards and buttons, featuring the brand color #a932bd",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "holographic effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation links display holographic gradient borders on hover",
+        "Cart icon has animated holographic border effect",
+        "Effects use brand color #a932bd as part of the gradient",
+        "Animations are smooth and match existing holographic effects elsewhere",
+        "Effects remain visible against the transparent header background"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Add holographic gradient effects to the mega menu dropdown panels, including iridescent borders around the panel containers and subtle holographic background gradients that complement the transparent header and create visual cohesion with the vanguardist design aesthetic",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "mega menu, holographic effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Mega menu panels have holographic gradient borders",
+        "Panel backgrounds feature subtle iridescent gradients",
+        "Effects coordinate with header transparency and backdrop blur",
+        "Visual style matches existing holographic effects throughout the site"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the Layout component structure beyond logo replacement",
-    "Preserve existing navigation functionality and mobile menu behavior",
-    "Maintain responsive design for logo display across all screen sizes"
+    "Maintain the existing Layout component structure with sticky header positioning",
+    "Preserve the theme-aware TS Gabrielle logo switching functionality",
+    "Keep the mobile menu functionality intact",
+    "Use the brand color #a932bd as the primary accent in holographic effects",
+    "Maintain consistency with existing holographic effects on product cards, buttons, and headings"
   ],
   "nonGoals": [
-    "Redesigning the header layout",
-    "Changing navigation menu structure",
-    "Modifying brand color scheme (#a932bd)",
-    "Altering any other components besides logo display"
+    "Changing the navigation structure or adding new navigation items",
+    "Modifying the backend or cart functionality",
+    "Redesigning the mobile menu layout",
+    "Adding new pages or routes"
   ],
   "imageRequirements": {
     "required": [],

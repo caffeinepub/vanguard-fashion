@@ -1,12 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the placeholder Vanguard branding with the TS Gabrielle brand logo and name throughout the application.
+**Goal:** Transform the header navigation into a transparent mega menu with holographic effects.
 
 **Planned changes:**
-- Replace the "Vanguard" text logo in the header with the tsgabrielle logo, using the purple version for light mode and white version for dark mode
-- Update all text references from "Vanguard" to "TS Gabrielle" throughout the application including page titles, meta tags, and UI text
-- Ensure the logo is clickable and navigates to the homepage
-- Maintain responsive design and existing navigation functionality
+- Make header background transparent with backdrop blur effect
+- Convert navigation into a mega menu with hover-triggered dropdown panels featuring multi-column layouts
+- Apply holographic gradient effects to nav links and cart icon with animated borders using brand color #a932bd
+- Add holographic gradient borders and backgrounds to mega menu dropdown panels
 
-**User-visible outcome:** The application displays the TS Gabrielle brand logo in the header (with theme-appropriate colors) and uses the correct brand name throughout all text content.
+**User-visible outcome:** Users will see a modern transparent header with an expanded mega menu navigation system featuring iridescent holographic effects that shimmer on hover, creating a cohesive vanguardist aesthetic throughout the site.

@@ -81,3 +81,123 @@
         @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+    /* Holographic border effect for navigation links */
+    .holographic-border {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302),
+            oklch(0.65 0.20 280),
+            oklch(0.70 0.22 320),
+            oklch(0.60 0.18 340),
+            oklch(0.55 0.18 302)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 3s ease-in-out infinite;
+        padding: 2px;
+        border-radius: 0.5rem;
+    }
+
+    /* Animated holographic border for cart icon */
+    .holographic-border-animated {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302),
+            oklch(0.65 0.20 280),
+            oklch(0.70 0.22 320),
+            oklch(0.60 0.18 340),
+            oklch(0.55 0.18 302)
+        );
+        background-size: 300% 300%;
+        animation: holographic-shimmer 2s ease-in-out infinite;
+        padding: 2px;
+        border-radius: 0.5rem;
+    }
+
+    /* Holographic badge effect */
+    .holographic-badge {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302),
+            oklch(0.65 0.20 280),
+            oklch(0.70 0.22 320)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 3s ease-in-out infinite;
+        box-shadow: 0 0 20px oklch(0.55 0.18 302 / 0.5);
+    }
+
+    /* Mega menu panel with holographic effects */
+    .mega-menu-panel {
+        background: oklch(var(--background) / 0.95);
+        backdrop-filter: blur(20px);
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        position: relative;
+        animation: mega-menu-fade-in 0.3s ease-out;
+    }
+
+    .mega-menu-panel::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.6),
+            oklch(0.65 0.20 280 / 0.6),
+            oklch(0.70 0.22 320 / 0.6),
+            oklch(0.60 0.18 340 / 0.6),
+            oklch(0.55 0.18 302 / 0.6)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 4s ease-in-out infinite;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .dark .mega-menu-panel {
+        background: oklch(var(--background) / 0.90);
+    }
+
+    .dark .mega-menu-panel::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.7),
+            oklch(0.70 0.22 280 / 0.7),
+            oklch(0.75 0.18 320 / 0.7),
+            oklch(0.68 0.20 340 / 0.7),
+            oklch(0.65 0.20 302 / 0.7)
+        );
+        background-size: 200% 200%;
+    }
+}
+
+@layer utilities {
+    /* Holographic shimmer animation */
+    @keyframes holographic-shimmer {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    /* Mega menu fade-in animation */
+    @keyframes mega-menu-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { ShoppingBag, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../hooks/useCart';
 import { Button } from './ui/button';
+import { MegaMenu } from './MegaMenu';
 
 export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
+      <header className="sticky top-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/40">
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center">
@@ -30,25 +31,15 @@ export function Layout() {
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
-              <Link
-                to="/"
-                className="text-sm font-semibold uppercase tracking-wider hover:text-[#a932bd] transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                to="/products"
-                className="text-sm font-semibold uppercase tracking-wider hover:text-[#a932bd] transition-colors"
-              >
-                Shop
-              </Link>
+              <MegaMenu />
               <button
                 onClick={() => navigate({ to: '/cart' })}
-                className="relative p-2 hover:text-[#a932bd] transition-colors"
+                className="group relative p-2 transition-all duration-300 hover:text-primary"
               >
-                <ShoppingBag className="h-6 w-6" />
+                <ShoppingBag className="h-6 w-6 relative z-10" />
+                <span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 holographic-border-animated" />
                 {cartItemCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-[#a932bd] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center z-20 holographic-badge">
                     {cartItemCount}
                   </span>
                 )}
@@ -64,17 +55,17 @@ export function Layout() {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 space-y-4 border-t border-border">
+            <div className="md:hidden py-4 space-y-4 border-t border-border/40">
               <Link
                 to="/"
-                className="block text-sm font-semibold uppercase tracking-wider hover:text-[#a932bd] transition-colors"
+                className="block text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 to="/products"
-                className="block text-sm font-semibold uppercase tracking-wider hover:text-[#a932bd] transition-colors"
+                className="block text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Shop
@@ -84,7 +75,7 @@ export function Layout() {
                   navigate({ to: '/cart' });
                   setMobileMenuOpen(false);
                 }}
-                className="flex items-center space-x-2 text-sm font-semibold uppercase tracking-wider hover:text-[#a932bd] transition-colors"
+                className="flex items-center space-x-2 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors"
               >
                 <ShoppingBag className="h-5 w-5" />
                 <span>Cart ({cartItemCount})</span>
@@ -120,17 +111,17 @@ export function Layout() {
               <h4 className="font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link to="/" className="hover:text-[#a932bd] transition-colors">
+                  <Link to="/" className="hover:text-primary transition-colors">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/products" className="hover:text-[#a932bd] transition-colors">
+                  <Link to="/products" className="hover:text-primary transition-colors">
                     Shop
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cart" className="hover:text-[#a932bd] transition-colors">
+                  <Link to="/cart" className="hover:text-primary transition-colors">
                     Cart
                   </Link>
                 </li>
@@ -152,7 +143,7 @@ export function Layout() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#a932bd] transition-colors"
+                className="hover:text-primary transition-colors"
               >
                 caffeine.ai
               </a>
