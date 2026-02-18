@@ -110,7 +110,7 @@ export default function Cart() {
             </div>
 
             <div className="lg:col-span-1">
-              <div className="bg-card rounded-lg border border-border p-6 sticky top-24">
+              <div className="bg-card rounded-lg border border-border p-6 sticky top-24 holographic-total">
                 <h2 className="text-2xl font-bold mb-6">Order Summary</h2>
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between text-lg">

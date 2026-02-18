@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "E-commerce fashion store for transwomen featuring creative and vanguardist designs with brand color #a932bd and fullscreen slides at homepage",
   "architectural_notes": [
     "E-commerce platform targeting transwomen fashion market",
@@ -127,6 +127,38 @@
       "title": "Add holographic gradient effects to the mega menu dropdown panels, including iridescent borders around the panel containers and subtle holographic background gradients that complement the transparent header and create visual cohesion with the vanguardist design aesthetic",
       "reqIds": [
         "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-holographic-gradient-effects-to-the-cart-items-in-the-cart-page-including-iridescent-borders-around-cart-item-containers-and-subtle-holographic-background-shimmer-on-hover-consistent-with-existing-holographic-effects-using-the-brand-color-a932bd",
+      "title": "Apply holographic gradient effects to the cart items in the Cart page, including iridescent borders around cart item containers and subtle holographic background shimmer on hover, consistent with existing holographic effects using the brand color #a932bd",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-holographic-gradient-effects-to-the-feature-cards-on-the-homepage-including-animated-iridescent-borders-and-subtle-holographic-background-gradients-that-create-shimmer-effects-consistent-with-the-vanguardist-design-aesthetic",
+      "title": "Add holographic gradient effects to the feature cards on the homepage, including animated iridescent borders and subtle holographic background gradients that create shimmer effects consistent with the vanguardist design aesthetic",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-holographic-effects-to-the-quantity-controls-and-remove-buttons-in-cart-items-using-animated-gradient-borders-that-create-iridescent-shimmer-on-hover-and-active-states",
+      "title": "Apply holographic effects to the quantity controls and remove buttons in cart items, using animated gradient borders that create iridescent shimmer on hover and active states",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-holographic-gradient-effects-to-the-checkout-total-price-section-in-the-cart-including-an-iridescent-border-around-the-total-price-container-and-subtle-holographic-background-that-emphasizes-the-call-to-action",
+      "title": "Add holographic gradient effects to the checkout/total price section in the cart, including an iridescent border around the total price container and subtle holographic background that emphasizes the call-to-action",
+      "reqIds": [
+        "REQ-21"
       ],
       "version": 1
     }

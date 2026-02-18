@@ -176,6 +176,337 @@
         );
         background-size: 200% 200%;
     }
+
+    /* Cart item holographic border */
+    .cart-item-holographic {
+        position: relative;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        transition: all 0.3s ease;
+    }
+
+    .cart-item-holographic::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.4),
+            oklch(0.65 0.20 280 / 0.4),
+            oklch(0.70 0.22 320 / 0.4),
+            oklch(0.60 0.18 340 / 0.4),
+            oklch(0.55 0.18 302 / 0.4)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 3s ease-in-out infinite;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .cart-item-holographic:hover::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.7),
+            oklch(0.65 0.20 280 / 0.7),
+            oklch(0.70 0.22 320 / 0.7),
+            oklch(0.60 0.18 340 / 0.7),
+            oklch(0.55 0.18 302 / 0.7)
+        );
+        background-size: 200% 200%;
+    }
+
+    .cart-item-holographic:hover {
+        background: linear-gradient(
+            135deg,
+            oklch(var(--background)),
+            oklch(0.55 0.18 302 / 0.05),
+            oklch(var(--background))
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 2s ease-in-out infinite;
+    }
+
+    .dark .cart-item-holographic::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.5),
+            oklch(0.70 0.22 280 / 0.5),
+            oklch(0.75 0.18 320 / 0.5),
+            oklch(0.68 0.20 340 / 0.5),
+            oklch(0.65 0.20 302 / 0.5)
+        );
+        background-size: 200% 200%;
+    }
+
+    .dark .cart-item-holographic:hover::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.8),
+            oklch(0.70 0.22 280 / 0.8),
+            oklch(0.75 0.18 320 / 0.8),
+            oklch(0.68 0.20 340 / 0.8),
+            oklch(0.65 0.20 302 / 0.8)
+        );
+        background-size: 200% 200%;
+    }
+
+    /* Holographic button effect for cart controls */
+    .holographic-button {
+        position: relative;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        transition: all 0.3s ease;
+    }
+
+    .holographic-button::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.5),
+            oklch(0.65 0.20 280 / 0.5),
+            oklch(0.70 0.22 320 / 0.5),
+            oklch(0.60 0.18 340 / 0.5),
+            oklch(0.55 0.18 302 / 0.5)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 3s ease-in-out infinite;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .holographic-button:hover::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.8),
+            oklch(0.65 0.20 280 / 0.8),
+            oklch(0.70 0.22 320 / 0.8),
+            oklch(0.60 0.18 340 / 0.8),
+            oklch(0.55 0.18 302 / 0.8)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 1.5s ease-in-out infinite;
+    }
+
+    .dark .holographic-button::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.6),
+            oklch(0.70 0.22 280 / 0.6),
+            oklch(0.75 0.18 320 / 0.6),
+            oklch(0.68 0.20 340 / 0.6),
+            oklch(0.65 0.20 302 / 0.6)
+        );
+        background-size: 200% 200%;
+    }
+
+    .dark .holographic-button:hover::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.9),
+            oklch(0.70 0.22 280 / 0.9),
+            oklch(0.75 0.18 320 / 0.9),
+            oklch(0.68 0.20 340 / 0.9),
+            oklch(0.65 0.20 302 / 0.9)
+        );
+        background-size: 200% 200%;
+    }
+
+    /* Holographic total section */
+    .holographic-total {
+        position: relative;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+    }
+
+    .holographic-total::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.6),
+            oklch(0.65 0.20 280 / 0.6),
+            oklch(0.70 0.22 320 / 0.6),
+            oklch(0.60 0.18 340 / 0.6),
+            oklch(0.55 0.18 302 / 0.6)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 3s ease-in-out infinite;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .holographic-total::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.03),
+            oklch(0.65 0.20 280 / 0.03),
+            oklch(0.70 0.22 320 / 0.03)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 4s ease-in-out infinite;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .dark .holographic-total::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.7),
+            oklch(0.70 0.22 280 / 0.7),
+            oklch(0.75 0.18 320 / 0.7),
+            oklch(0.68 0.20 340 / 0.7),
+            oklch(0.65 0.20 302 / 0.7)
+        );
+        background-size: 200% 200%;
+    }
+
+    .dark .holographic-total::after {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.05),
+            oklch(0.70 0.22 280 / 0.05),
+            oklch(0.75 0.18 320 / 0.05)
+        );
+        background-size: 200% 200%;
+    }
+
+    /* Feature card holographic effect */
+    .feature-card-holographic {
+        position: relative;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        transition: all 0.3s ease;
+    }
+
+    .feature-card-holographic::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.5),
+            oklch(0.65 0.20 280 / 0.5),
+            oklch(0.70 0.22 320 / 0.5),
+            oklch(0.60 0.18 340 / 0.5),
+            oklch(0.55 0.18 302 / 0.5)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 4s ease-in-out infinite;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .feature-card-holographic::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.05),
+            oklch(0.65 0.20 280 / 0.05),
+            oklch(0.70 0.22 320 / 0.05)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 5s ease-in-out infinite;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .feature-card-holographic:hover::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.8),
+            oklch(0.65 0.20 280 / 0.8),
+            oklch(0.70 0.22 320 / 0.8),
+            oklch(0.60 0.18 340 / 0.8),
+            oklch(0.55 0.18 302 / 0.8)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 2s ease-in-out infinite;
+    }
+
+    .feature-card-holographic:hover::after {
+        background: linear-gradient(
+            135deg,
+            oklch(0.55 0.18 302 / 0.1),
+            oklch(0.65 0.20 280 / 0.1),
+            oklch(0.70 0.22 320 / 0.1)
+        );
+        background-size: 200% 200%;
+        animation: holographic-shimmer 2.5s ease-in-out infinite;
+    }
+
+    .dark .feature-card-holographic::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.6),
+            oklch(0.70 0.22 280 / 0.6),
+            oklch(0.75 0.18 320 / 0.6),
+            oklch(0.68 0.20 340 / 0.6),
+            oklch(0.65 0.20 302 / 0.6)
+        );
+        background-size: 200% 200%;
+    }
+
+    .dark .feature-card-holographic::after {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.08),
+            oklch(0.70 0.22 280 / 0.08),
+            oklch(0.75 0.18 320 / 0.08)
+        );
+        background-size: 200% 200%;
+    }
+
+    .dark .feature-card-holographic:hover::before {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.9),
+            oklch(0.70 0.22 280 / 0.9),
+            oklch(0.75 0.18 320 / 0.9),
+            oklch(0.68 0.20 340 / 0.9),
+            oklch(0.65 0.20 302 / 0.9)
+        );
+        background-size: 200% 200%;
+    }
+
+    .dark .feature-card-holographic:hover::after {
+        background: linear-gradient(
+            135deg,
+            oklch(0.65 0.20 302 / 0.15),
+            oklch(0.70 0.22 280 / 0.15),
+            oklch(0.75 0.18 320 / 0.15)
+        );
+        background-size: 200% 200%;
+    }
 }
 
 @layer utilities {

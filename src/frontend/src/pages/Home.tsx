@@ -31,21 +31,21 @@ export default function Home() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[#a932bd]/10 to-transparent border border-[#a932bd]/20">
+            <div className="text-center p-8 rounded-2xl feature-card-holographic">
               <div className="text-5xl font-black text-[#a932bd] mb-4">01</div>
               <h3 className="text-xl font-bold mb-3">Vanguardist Design</h3>
               <p className="text-muted-foreground">
                 Cutting-edge fashion that breaks conventions and celebrates individuality.
               </p>
             </div>
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[#a932bd]/10 to-transparent border border-[#a932bd]/20">
+            <div className="text-center p-8 rounded-2xl feature-card-holographic">
               <div className="text-5xl font-black text-[#a932bd] mb-4">02</div>
               <h3 className="text-xl font-bold mb-3">Artistic Expression</h3>
               <p className="text-muted-foreground">
                 Every piece is a work of art, designed to make you feel confident and beautiful.
               </p>
             </div>
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[#a932bd]/10 to-transparent border border-[#a932bd]/20">
+            <div className="text-center p-8 rounded-2xl feature-card-holographic">
               <div className="text-5xl font-black text-[#a932bd] mb-4">03</div>
               <h3 className="text-xl font-bold mb-3">Inclusive Fashion</h3>
               <p className="text-muted-foreground">

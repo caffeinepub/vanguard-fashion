@@ -1,99 +1,78 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add transparent mega menu with holographic effects to header",
+  "title": "Expand holographic effects across cart page and homepage elements",
   "requirements": [
     {
-      "id": "REQ-14",
-      "summary": "Make header navigation transparent with backdrop blur effect while maintaining readability",
+      "id": "REQ-18",
+      "summary": "Apply holographic gradient effects to cart items including iridescent borders and hover shimmer",
       "acceptanceCriteria": [
-        "Header has transparent background with backdrop-blur CSS property",
-        "Navigation remains readable over different background content",
-        "Maintains existing sticky positioning behavior"
+        "Cart item containers display iridescent gradient borders",
+        "Cart items show subtle holographic background shimmer effect on hover",
+        "Effects use brand color #a932bd and complement existing holographic design patterns",
+        "Animation is smooth and matches the timing of other holographic effects"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Layout.tsx",
+          "path": "frontend/src/components/CartItem.tsx",
           "operation": "modify",
-          "description": "Update the header element to use transparent background with backdrop-blur CSS. Replace the solid background classes with transparent background and backdrop-blur-md. Ensure the header maintains sticky positioning and readability with appropriate text contrast adjustments."
+          "description": "Add holographic border effects using animated gradients to cart item containers. Add hover state with subtle holographic background shimmer effect. Use brand color #a932bd in gradient definitions. Ensure animations match timing of existing holographic effects (as seen in ProductCard, Layout header, and MegaMenu). Apply CSS classes or inline styles consistent with the existing holographic pattern from index.css."
         },
         {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Add custom CSS utilities or layer styles if needed to support the transparent header with backdrop blur effect, ensuring proper browser compatibility and fallback styles."
+          "description": "Add new CSS utility classes or keyframe animations for cart item holographic effects if they don't already exist. Define iridescent border gradient animations and hover shimmer backgrounds using the brand color #a932bd. Ensure consistency with existing holographic animation definitions."
         }
       ]
     },
     {
-      "id": "REQ-15",
-      "summary": "Transform header navigation into mega menu with expandable dropdown panels on hover",
+      "id": "REQ-19",
+      "summary": "Add holographic gradient effects to homepage feature cards with animated borders and shimmer backgrounds",
       "acceptanceCriteria": [
-        "Main navigation items trigger mega menu panels on hover",
-        "Mega menu panels display in multi-column layout below the header",
-        "Panels include relevant links and content for each navigation section",
-        "Smooth transitions when opening and closing mega menu panels",
-        "Mobile-responsive behavior that collapses to accordion or drawer"
+        "Feature cards display animated holographic border effects",
+        "Subtle holographic background gradients are visible on the feature cards",
+        "Effects complement existing holographic elements and use the brand color palette",
+        "Hover states enhance the holographic shimmer effect"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/MegaMenu.tsx",
-          "operation": "create",
-          "description": "Create a new MegaMenu component that renders expandable dropdown panels for main navigation items (Home, Products, Cart). Implement hover trigger logic with multi-column layout support. Include smooth transitions for panel opening/closing. Structure panels to contain relevant links, descriptions, and promotional content for each navigation section. Ensure mobile-responsive behavior with accordion or drawer collapse."
-        },
-        {
-          "path": "frontend/src/components/Layout.tsx",
+          "path": "frontend/src/pages/Home.tsx",
           "operation": "modify",
-          "description": "Integrate the MegaMenu component into the Layout header navigation. Replace or enhance the existing navigation links (Home, Products, Cart) to work with the mega menu system. Wire the MegaMenu component into the desktop navigation structure while preserving the existing mobile menu functionality. Maintain the theme-aware TS Gabrielle logo and cart icon with item count badge."
-        },
-        {
-          "path": "frontend/src/hooks/useMegaMenu.ts",
-          "operation": "create",
-          "description": "Create a custom hook to manage mega menu state including open/close state, active panel tracking, hover delay logic, and keyboard navigation support. Handle transition timing and cleanup."
+          "description": "Apply holographic gradient effects to the three feature cards (vanguardist design, artistic expression, inclusive fashion). Add animated iridescent borders using brand color #a932bd. Add subtle holographic background gradients that create shimmer effects. Enhance hover states to intensify the holographic shimmer. Use CSS classes or styling patterns consistent with existing holographic elements in ProductCard and MegaMenu."
         }
       ]
     },
     {
-      "id": "REQ-16",
-      "summary": "Apply holographic gradient effects to header navigation elements including links and cart icon",
+      "id": "REQ-20",
+      "summary": "Apply holographic effects to quantity controls and remove buttons with animated gradient borders",
       "acceptanceCriteria": [
-        "Navigation links display holographic gradient borders on hover",
-        "Cart icon has animated holographic border effect",
-        "Effects use brand color #a932bd as part of the gradient",
-        "Animations are smooth and match existing holographic effects elsewhere",
-        "Effects remain visible against the transparent header background"
+        "Increment and decrement buttons display holographic border effects",
+        "Remove button shows iridescent gradient animation",
+        "Hover and active states enhance the holographic shimmer",
+        "Effects maintain consistency with other interactive elements"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Layout.tsx",
+          "path": "frontend/src/components/CartItem.tsx",
           "operation": "modify",
-          "description": "Add holographic gradient effects to navigation links and the cart icon. Implement animated gradient borders on hover for nav links and an animated holographic border effect on the cart icon. Use brand color #a932bd as part of the gradient. Ensure effects are visible against the transparent header background and match the existing holographic styling on product cards and buttons throughout the site."
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Add CSS keyframe animations and gradient definitions for holographic effects on header navigation elements. Define iridescent shimmer animations featuring the brand color #a932bd that coordinate with existing holographic effects. Include responsive considerations to ensure effects work with the transparent backdrop-blur header."
+          "description": "Add holographic border effects to increment and decrement quantity control buttons. Add iridescent gradient animation to the remove button using brand color #a932bd. Enhance hover and active states with increased holographic shimmer intensity. Ensure effects are consistent with other interactive elements like the cart icon and navigation buttons."
         }
       ]
     },
     {
-      "id": "REQ-17",
-      "summary": "Add holographic gradient effects to mega menu dropdown panels",
+      "id": "REQ-21",
+      "summary": "Add holographic gradient effects to checkout/total price section emphasizing the call-to-action",
       "acceptanceCriteria": [
-        "Mega menu panels have holographic gradient borders",
-        "Panel backgrounds feature subtle iridescent gradients",
-        "Effects coordinate with header transparency and backdrop blur",
-        "Visual style matches existing holographic effects throughout the site"
+        "Total price section displays prominent holographic border effect",
+        "Subtle holographic background gradient enhances visual hierarchy",
+        "Effects draw attention to the checkout area without overwhelming the content",
+        "Design maintains readability of price information"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/MegaMenu.tsx",
+          "path": "frontend/src/pages/Cart.tsx",
           "operation": "modify",
-          "description": "Apply holographic gradient effects to the mega menu dropdown panels. Add iridescent borders around panel containers and subtle holographic background gradients. Ensure effects coordinate with the transparent header and backdrop blur, creating visual cohesion with the vanguardist design aesthetic. Match the visual style of existing holographic effects on product cards, buttons, and headings."
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Add CSS styles for mega menu panel holographic effects including gradient border definitions, iridescent background gradients, and animations. Ensure styles integrate seamlessly with the transparent header backdrop and existing holographic effect system. Use brand color #a932bd as part of the gradient palette."
+          "description": "Add holographic border effect to the total price container using animated iridescent gradients with brand color #a932bd. Add subtle holographic background gradient to enhance visual hierarchy and draw attention to the checkout area. Ensure effects maintain readability of price information. Use CSS patterns consistent with existing holographic effects in the application."
         }
       ]
     }

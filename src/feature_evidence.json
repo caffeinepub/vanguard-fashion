@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-make-the-header-navigation-in-the-layout-component-transparent-with-a-backdrop-blur-effect-removing-the-solid-background-while-maintaining-readability",
-      "featureTitle": "Make the header navigation in the Layout component transparent with a backdrop blur effect, removing the solid background while maintaining readability",
+      "featureId": "feature-apply-holographic-gradient-effects-to-the-cart-items-in-the-cart-page-including-iridescent-borders-around-cart-item-containers-and-subtle-holographic-background-shimmer-on-hover-consistent-with-existing-holographic-effects-using-the-brand-color-a932bd",
+      "featureTitle": "Apply holographic gradient effects to the cart items in the Cart page, including iridescent borders around cart item containers and subtle holographic background shimmer on hover, consistent with existing holographic effects using the brand color #a932bd",
       "files": [
-        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/CartItem.tsx",
         "frontend/src/index.css"
       ],
       "components": [
@@ -17,17 +17,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-14"
+        "REQ-18"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-transform-the-layout-component-header-navigation-into-a-mega-menu-structure-that-displays-expanded-dropdown-panels-on-hover-for-main-navigation-items-home-products-cart-featuring-multi-column-layouts-with-links-descriptions-and-promotional-content",
-      "featureTitle": "Transform the Layout component header navigation into a mega menu structure that displays expanded dropdown panels on hover for main navigation items (Home, Products, Cart), featuring multi-column layouts with links, descriptions, and promotional content",
+      "featureId": "feature-add-holographic-gradient-effects-to-the-feature-cards-on-the-homepage-including-animated-iridescent-borders-and-subtle-holographic-background-gradients-that-create-shimmer-effects-consistent-with-the-vanguardist-design-aesthetic",
+      "featureTitle": "Add holographic gradient effects to the feature cards on the homepage, including animated iridescent borders and subtle holographic background gradients that create shimmer effects consistent with the vanguardist design aesthetic",
       "files": [
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/components/MegaMenu.tsx",
-        "frontend/src/hooks/useMegaMenu.ts"
+        "frontend/src/pages/Home.tsx"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -38,16 +36,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-15"
+        "REQ-19"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-apply-holographic-gradient-effects-to-the-header-navigation-elements-including-nav-links-and-the-cart-icon-using-animated-gradient-borders-and-background-effects-that-create-iridescent-shimmer-consistent-with-the-existing-holographic-effects-on-product-cards-and-buttons-featuring-the-brand-color-a932bd",
-      "featureTitle": "Apply holographic gradient effects to the header navigation elements including nav links and the cart icon, using animated gradient borders and background effects that create iridescent shimmer consistent with the existing holographic effects on product cards and buttons, featuring the brand color #a932bd",
+      "featureId": "feature-apply-holographic-effects-to-the-quantity-controls-and-remove-buttons-in-cart-items-using-animated-gradient-borders-that-create-iridescent-shimmer-on-hover-and-active-states",
+      "featureTitle": "Apply holographic effects to the quantity controls and remove buttons in cart items, using animated gradient borders that create iridescent shimmer on hover and active states",
       "files": [
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/index.css"
+        "frontend/src/components/CartItem.tsx"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -58,16 +55,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-16"
+        "REQ-20"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-holographic-gradient-effects-to-the-mega-menu-dropdown-panels-including-iridescent-borders-around-the-panel-containers-and-subtle-holographic-background-gradients-that-complement-the-transparent-header-and-create-visual-cohesion-with-the-vanguardist-design-aesthetic",
-      "featureTitle": "Add holographic gradient effects to the mega menu dropdown panels, including iridescent borders around the panel containers and subtle holographic background gradients that complement the transparent header and create visual cohesion with the vanguardist design aesthetic",
+      "featureId": "feature-add-holographic-gradient-effects-to-the-checkout-total-price-section-in-the-cart-including-an-iridescent-border-around-the-total-price-container-and-subtle-holographic-background-that-emphasizes-the-call-to-action",
+      "featureTitle": "Add holographic gradient effects to the checkout/total price section in the cart, including an iridescent border around the total price container and subtle holographic background that emphasizes the call-to-action",
       "files": [
-        "frontend/src/components/MegaMenu.tsx",
-        "frontend/src/index.css"
+        "frontend/src/pages/Cart.tsx"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -78,7 +74,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-17"
+        "REQ-21"
       ],
       "confidence": "high"
     }

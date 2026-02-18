@@ -17,7 +17,7 @@ export function CartItem({ item, product, onUpdateQuantity, onRemove }: CartItem
   const total = (price * quantity) / 100;
 
   return (
-    <div className="flex gap-4 py-6 border-b border-border">
+    <div className="flex gap-4 py-6 border-b border-border cart-item-holographic rounded-lg px-4">
       <div className="w-24 h-32 flex-shrink-0 overflow-hidden rounded-lg bg-muted">
         <img src={imageUrl} alt={product.name} className="w-full h-full object-cover" />
       </div>
@@ -34,7 +34,7 @@ export function CartItem({ item, product, onUpdateQuantity, onRemove }: CartItem
             <Button
               variant="outline"
               size="icon"
-              className="h-8 w-8"
+              className="h-8 w-8 holographic-button"
               onClick={() => onUpdateQuantity(Math.max(1, quantity - 1))}
               disabled={quantity <= 1}
             >
@@ -44,7 +44,7 @@ export function CartItem({ item, product, onUpdateQuantity, onRemove }: CartItem
             <Button
               variant="outline"
               size="icon"
-              className="h-8 w-8"
+              className="h-8 w-8 holographic-button"
               onClick={() => onUpdateQuantity(quantity + 1)}
             >
               <Plus className="h-4 w-4" />
@@ -52,7 +52,12 @@ export function CartItem({ item, product, onUpdateQuantity, onRemove }: CartItem
           </div>
           <div className="flex items-center gap-4">
             <p className="font-bold text-lg">${total.toFixed(2)}</p>
-            <Button variant="ghost" size="icon" onClick={onRemove} className="text-destructive hover:text-destructive">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={onRemove} 
+              className="text-destructive hover:text-destructive holographic-button"
+            >
               <Trash2 className="h-5 w-5" />
             </Button>
           </div>

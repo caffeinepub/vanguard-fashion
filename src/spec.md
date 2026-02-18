@@ -1,12 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Transform the header navigation into a transparent mega menu with holographic effects.
+**Goal:** Expand holographic gradient effects to cart page elements and homepage feature cards for a cohesive vanguardist design aesthetic.
 
 **Planned changes:**
-- Make header background transparent with backdrop blur effect
-- Convert navigation into a mega menu with hover-triggered dropdown panels featuring multi-column layouts
-- Apply holographic gradient effects to nav links and cart icon with animated borders using brand color #a932bd
-- Add holographic gradient borders and backgrounds to mega menu dropdown panels
+- Add iridescent borders and holographic shimmer effects to cart item containers with hover states
+- Apply holographic gradient effects to homepage feature cards with animated borders
+- Add holographic effects to quantity controls and remove buttons in cart items
+- Enhance checkout/total price section with prominent holographic border and background gradient
+- Maintain consistency with existing holographic effects using brand color #a932bd
 
-**User-visible outcome:** Users will see a modern transparent header with an expanded mega menu navigation system featuring iridescent holographic effects that shimmer on hover, creating a cohesive vanguardist aesthetic throughout the site.
+**User-visible outcome:** Users experience a cohesive holographic design throughout the cart page and homepage, with iridescent shimmer effects on cart items, feature cards, interactive buttons, and the checkout section that complement the existing vanguardist aesthetic.
