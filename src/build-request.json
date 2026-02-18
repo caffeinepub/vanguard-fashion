@@ -1,0 +1,139 @@
+{
+  "kind": "build_request",
+  "title": "Create e-commerce fashion store with fullscreen homepage carousel",
+  "projectName": "Vanguard Fashion",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a product catalog system in the backend that stores fashion items with fields for name, description, price, sizes, colors, and image URLs",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores product data with all required fields",
+        "Products can be retrieved via query methods",
+        "Product data persists across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a shopping cart system in the backend that allows adding items, updating quantities, and calculating totals",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can add products to cart with selected size and color",
+        "Cart quantities can be updated or items removed",
+        "Cart total is calculated correctly including all items"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build a fullscreen slideshow carousel component for the homepage that displays hero images with smooth transitions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Carousel takes up full viewport height",
+        "Slides transition smoothly with navigation controls",
+        "Carousel is responsive and works on all screen sizes"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a product listing page that displays all available fashion items in a grid layout with images, names, and prices",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Products are displayed in a responsive grid",
+        "Each product shows image, name, and price",
+        "Users can click products to view details"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a product detail page that shows full product information including description, available sizes, colors, and add-to-cart functionality",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product details are displayed clearly",
+        "Users can select size and color options",
+        "Add to cart button adds selected item to shopping cart"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build a shopping cart page that displays cart items with quantities, allows quantity updates and item removal, and shows the total price",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All cart items are displayed with details",
+        "Quantities can be adjusted inline",
+        "Total price updates automatically",
+        "Items can be removed from cart"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a creative and vanguardist design aesthetic throughout the site with the brand color #a932bd as the primary accent color, featuring bold typography, modern layouts, and artistic visual elements that celebrate transwomen fashion",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "with the most creative and vanguardist designs, colors #a932bd"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary brand color #a932bd is used consistently for key UI elements",
+        "Design features bold, artistic typography and modern layouts",
+        "Visual aesthetic is cohesive and celebrates the target audience",
+        "Design feels cutting-edge and fashion-forward"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use #a932bd as the primary brand color throughout the design",
+    "Fullscreen carousel must be the first element on the homepage"
+  ],
+  "nonGoals": [
+    "Payment processing integration",
+    "User account creation or authentication beyond Internet Identity",
+    "Order fulfillment or shipping integration",
+    "Inventory management system"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Vanguardist fashion hero image featuring bold geometric patterns and color #a932bd, artistic and modern aesthetic (hero-1.dim_1920x1080.png)",
+      "Creative fashion showcase hero image with avant-garde styling and dramatic lighting incorporating #a932bd accents (hero-2.dim_1920x1080.png)",
+      "Bold artistic hero image celebrating transwomen fashion with vibrant purple #a932bd color scheme and cutting-edge design (hero-3.dim_1920x1080.png)",
+      "Modern fashion product photo of statement jacket in vanguardist style with #a932bd details (product-jacket.dim_800x1000.png)",
+      "Artistic product photo of bold dress design with creative patterns featuring #a932bd (product-dress.dim_800x1000.png)",
+      "Avant-garde fashion product photo of unique top with geometric elements and purple accents (product-top.dim_800x1000.png)"
+    ],
+    "edits": []
+  }
+}
